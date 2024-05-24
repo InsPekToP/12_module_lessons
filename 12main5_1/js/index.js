@@ -30,7 +30,10 @@ if (x>y){
         console.log("Число Х не равно 25");
     }
     //&& - и
-    if(x != 24 && hasCar == true){
+    // || - или
+    // hasCar == true и hasCar - одно и тоже
+    // hasCar == false и !hasCar - тоже самое
+    if(x != 24 || (hasCar == true && y == 24)){
         console.log("Число Х не равно 24");
     }
 }else if (x==20){
@@ -42,3 +45,4 @@ else{
     console.log("Числа не равны");
 }
 
+//16.42
