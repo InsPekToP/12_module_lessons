@@ -67,3 +67,7 @@ let matrix2 = [
     [5],
     [8.9,true,false,56]
 ];
+
+//ф-я 
+
+let str = "Hello,world,5,0,qwe";
