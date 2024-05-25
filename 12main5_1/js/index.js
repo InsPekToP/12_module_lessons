@@ -53,7 +53,11 @@ else{
 
 
 //let str = "George";
-let str = "Petr";
+// let str = "Petr";
+//let str = "Some-1";
+let str = "Some-2";
+
+
 switch(str){
     case "John":
         console.log("Имя John")
@@ -64,10 +68,27 @@ switch(str){
     case "George":
         console.log("Имя George");
         break;
+//если не ставить опер-тор break - выводится и Petr и Alex - Т.к. не 
+//выходим из проверки,дальше идет case "Alex": - это просто проверка,
+//он с ней ничего не делает и пропускает,поэтому выводит console.log("Имя Alex");
+//а затем доходит до break и выходит из итерации.
+    case "Petr": 
+        console.log("Имя Petr");
+        break;
     case "Alex":
         console.log("Имя Alex");
+        break;
+//пропуск break можно исп-ть,когда нужно проверить на несколько соответсвий
+    case "Some-1":
+    case "Some-2":
+    case "Some-3":
+    case "Some-4":
+        console.log("Some");
         break;
     default:
         console.log("Нам не известно имя");
         break;
     }
+
+//тернарные операторы
+
