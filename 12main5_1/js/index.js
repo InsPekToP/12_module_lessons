@@ -90,5 +90,18 @@ switch(str){
         break;
     }
 
-//тернарные операторы
+//тернарные операторы - сокращение if else
+//это:
 
+let nums = 23;
+let res = "";
+if(nums > 25)
+    res = "Big";
+else
+    res = "Small";
+console.log(res);
+
+//тоже самое что и это:
+//? - проверка, : - заменяет if else
+let result = nums > 25 ? "Big":"Small";
+console.log(result);
