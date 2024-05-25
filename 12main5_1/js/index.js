@@ -45,4 +45,29 @@ else{
     console.log("Числа не равны");
 }
 
-//16.42
+//Операторы switch - case - проверка на опр-ые условия
+//фигурные скобки обязательны
+//break - тоже надо писать,чтобы выходить из итерации
+//defol - тоже,что и else - выполняется,если прошлые комманды не были выполнены(можно
+//не ставить break,т.к. этот оператор пишется в конце,но лучше ставить
+
+
+//let str = "George";
+let str = "Petr";
+switch(str){
+    case "John":
+        console.log("Имя John")
+        break;
+    case "Bob":
+        console.log("Имя Bob");
+        break;
+    case "George":
+        console.log("Имя George");
+        break;
+    case "Alex":
+        console.log("Имя Alex");
+        break;
+    default:
+        console.log("Нам не известно имя");
+        break;
+    }
