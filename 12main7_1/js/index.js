@@ -58,3 +58,48 @@ for(var v = 1; v < 20; v++){
     console.log(v);
 }
 
+// создадим массив для практики над циклами
+
+let arr = [5,6,"Hello",'s',true,9];
+
+for(var b = 0; b < arr.length; b++){
+    console.log("Элемент под номером №" + (b+1) + ": " + arr[b]);
+}
+console.log("");
+
+var n = 0;
+while(n < arr.length){
+    console.log("Элемент c номером №" + (n+1) + ": " + arr[n]);
+    n++;
+}
+
+//for и while не лучшие циклы для работы с массивами
+//для этого лучше исп-ть forEach (он и был изобретен для работы с массивами)
+//указываем массив,затем forEach,затем function(1 пар-тр - опр-ый эл-нт в массиве,индекс,название массива)
+
+arr.forEach(function(item,m,array){
+    console.log("Элемент c номером №" + m + ": " + item + ".Массив: " + array);
+});
+
+//for in - для перебора обьектов
+
+for(var key in arr){
+    console.log("Элемент c номером №" + key + ": " + arr[key]);
+}
+
+//разница между let и var
+//область видимости var видно вне цикла(ф-ии?).let не видно(выбивает ошибку)
+
+for(var a = 0;a < 10; a++)
+    console.log(a);
+
+console.log(" ");
+
+console.log(a);
+
+for(let s = 0;s < 10; s++)
+    console.log(a);
+
+console.log(" ");
+
+console.log(s);
