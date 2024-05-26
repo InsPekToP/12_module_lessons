@@ -4,6 +4,8 @@
 
 let array = [45,true,6.92,"Hello",'R']; //может принимать любые значения
 console.log(array);
+
+
 //обратиться к массиву:
 //можно переопределять значения
 
@@ -68,6 +70,14 @@ let matrix2 = [
     [8.9,true,false,56]
 ];
 
-//ф-я 
+//ф-я split
 
 let str = "Hello,world,5,0,qwe";
+let array_split = str.split(","); //разбитие строки по символу(превращает в массив)
+console.log(array_split);
+
+let str2 = array.join(":"); //получаем обратно из массива строку
+console.log(str2);
+
+array.splice(1,2); // обрезаем массив,принимает 2 пар-ра(1й-с какого идекса.2й- сколько эл-тов)
+console.log(array);// не делает пустым,а удаляет э-ты
