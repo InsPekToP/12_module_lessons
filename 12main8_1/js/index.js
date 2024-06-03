@@ -63,3 +63,39 @@ let summa = nums.reduce(function(sum,el){
     return sum + el;
 });
 console.log(summa);
+
+//среднее арифметическое
+
+let currency = [23.5,4.56,33.5];
+//total - работает с общей суммой
+//el - с каждым отдельным эл-том
+//index - отвечает за индекс каждого эл-та
+//array - отвечает за весь массив с которым работаем
+let average = currency.reduce(function(total,el,index,array){
+    total += el; //в сумму добавляем текущий эл-нт
+    if(index == array.length - 1) //проверяем является ли эл-нт последним
+        return total/array.length;
+    else
+        return total;
+});
+
+console.log(average);
+
+//ф-я reduceRight
+//все тоже же самое,но сконца массива
+
+//let currency2 = [23.5,4.56,33.5];
+let currency2 = [];
+let average2 = currency2.reduceRight(function(total,el,index,array){
+    total += el;
+    //if(index == array.length - 1)//теперь это условие не срабатывает,
+    //чтобы срабатывало надо проверить на index=0
+    if(index ===0)
+        return total/array.length;
+    else
+        return total;
+//в эти ф-ии можно устанавливать второй пар-тр(по умолчанию)-сработает,
+//если массив будет пустой например
+},0);
+
+console.log(average2);
