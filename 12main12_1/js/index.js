@@ -91,3 +91,17 @@ volvo.info();
 bmw.weight = 1800;
 console.log(bmw.weight);
 console.log(volvo.weight);
+
+//мы уже работали с классами(при создании массива)
+let arr = [];
+//или же с применением класса
+let arr2 = new Array(45,50);
+//и дальше можно работать как с обычным массивом
+arr2.
+
+//через точку выбиваются подсказки,их можно пробивать в инете
+const array1 = ['1', '2', '3'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+
+console.log(array3);
