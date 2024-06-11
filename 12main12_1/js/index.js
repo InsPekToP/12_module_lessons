@@ -38,17 +38,43 @@ for(let key in car){
 
 //Классы - спец. конструкции,кот. описывают реальный обьект из жизни
 
-function Car(marka,color,type,speed){
-    //теперь чтобы присвоить пар-тр marka к пер-ой marka(которая принадлежит к этому классу,
-    //надо ис-ть ключевое слово this)
-    this.marka = marka;
-    this.color = color;
-    this.type = type;
-    this.speed = speed;
+// function Car(marka,color,type,speed){
+//     //теперь чтобы присвоить пар-тр marka к переменой marka(которая принадлежит к этому классу,
+//     //надо ис-ть ключевое слово this)
+//     this.marka = marka;
+//     this.color = color;
+//     this.type = type;
+//     this.speed = speed;
+//}
+
+//классы отличаются от обьекта тем что в классы мы можем помещать дополнительные ф-ии
+//например можно написать ф-ию,которая будет выводить все данные о обьекте
+//создаем ф-ию на основе ключевого слова class,а не на function
+class Car{
+    //необходимо прописать ф-ию кот будет принимать пар-ры ("M3","Синий","Седан",270);
+    //и устанавливать эти пар-ры в this.marka = marka; и т.д.
+    //чтобы это сделать,надо создать конструктор
+    constructor(marka,color,type,speed){
+        this.marka = marka;
+        this.color = color;
+        this.type = type;
+        this.speed = speed;
+    }
+    //теперь прописываем ф-ию
+    info(){
+        console.log("Марка: " + this.marka + ", цвет: " + this.color 
+            + ", тип: " + this.type + ", скорость: " + this.speed);
+    }
 }
+
+
 //чтобы создать обьект на основе класса:
 let bmw = new Car("M3","Синий","Седан",270);
 let volvo = new Car("Volvo","Белый","Седан",230);
+
+//можем переустановить значения
+bmw.color = "Красный";
+
 console.log(bmw.type);
 console.log(bmw.speed);
 console.log(bmw.color);
@@ -57,3 +83,11 @@ console.log(volvo.color);
 //классы стоить ис-ть,когда обьект большой
 //обьект лучше исп-ть,когда есть только 1 обьект
 
+
+//после создания класса конструктора и ф-ии,можем к ней обратиться
+bmw.info();
+volvo.info();
+//также можно добавлять те хар-ки,кот не были обьявлены в начале
+bmw.weight = 1800;
+console.log(bmw.weight);
+console.log(volvo.weight);
