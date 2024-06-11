@@ -46,5 +46,14 @@ function Car(marka,color,type,speed){
     this.type = type;
     this.speed = speed;
 }
+//чтобы создать обьект на основе класса:
+let bmw = new Car("M3","Синий","Седан",270);
+let volvo = new Car("Volvo","Белый","Седан",230);
+console.log(bmw.type);
+console.log(bmw.speed);
+console.log(bmw.color);
+console.log(volvo.color);
 
-14.08
+//классы стоить ис-ть,когда обьект большой
+//обьект лучше исп-ть,когда есть только 1 обьект
+
